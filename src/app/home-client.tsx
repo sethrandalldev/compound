@@ -1,5 +1,6 @@
 "use client";
 
+import { get } from "http";
 import { useState } from "react";
 
 export default function Home() {
@@ -30,6 +31,25 @@ export default function Home() {
     localStorage.setItem("lastCheckInDate", today);
   };
 
+  type DailyGoal = {
+    text: string
+  }
+
+  const goals: Record<number, DailyGoal> = {
+    0: { text: "Do 5 squats" },       // Sunday
+    1: { text: "Go for a walk" },                  // Monday
+    2: { text: "Do 3 pushups" },                 // Tuesday
+    3: { text: "Drink a glass of water" },         // Wednesday
+    4: { text: "Do 6 lunges" },                  // Thursday
+    5: { text: "Hold a 20s plank" },              // Friday
+    6: { text: "Eat a vegetable" },  // Saturday
+  }
+
+  function getTodayGoal(): DailyGoal {
+    const day = new Date().getDay()
+    return goals[day]
+  }
+
   return (
     <div className="flex min-h-screen items-center justify-center bg-blue-50 px-4">
       <main className="w-full max-w-md rounded-3xl bg-white p-10 shadow-[0_20px_60px_-15px_rgba(0,0,0,0.15)]">
@@ -42,7 +62,7 @@ export default function Home() {
             Today’s Goal
           </p>
           <p className="mt-3 text-2xl font-semibold text-gray-800">
-            Do 5 squats
+            {getTodayGoal().text}
           </p>
         </div>
 
