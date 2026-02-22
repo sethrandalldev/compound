@@ -17,5 +17,13 @@
       "sizes": "512x512",
       "type": "image/png"
     }
+  ],
+  "screenshots": [
+    {
+      "src": "/screenshots/compound-screenshot-png.png",
+      "sizes": "413x418",
+      "type": "image/png",
+      "form_factor": "wide"
+    }
   ]
 }
