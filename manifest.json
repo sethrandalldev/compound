@@ -1,0 +1,21 @@
+{
+  "name": "Compound",
+  "short_name": "Compound",
+  "description": "Check in to your daily fitness goals and build habits.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f0fdfa",
+  "theme_color": "#10b981",
+  "icons": [
+    {
+      "src": "/icons/compound-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/compound-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
