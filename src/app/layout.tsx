@@ -29,6 +29,10 @@ export default function RootLayout({
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#10b981" />
         <link rel="apple-touch-icon" href="/icons/icon-192.png" />
+        <meta property="og:title" content="Compound" />
+        <meta property="og:description" content="Track your daily fitness goals." />
+        <meta property="og:image" content="https://compoundhealth.netlify.app/screenshots/compound-screenshot-png.png" />
+        <meta property="og:url" content="https://compoundhealth.netlify.app/" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
