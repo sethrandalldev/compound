@@ -79,16 +79,21 @@ export default function Home() {
             ${
               alreadyCheckedInToday
                 ? "bg-emerald-500 scale-105 shadow-xl"
-                : "bg-gradient-to-r from-blue-600 to-emerald-500 hover:shadow-xl hover:scale-[1.02]"
+                : "bg-gradient-to-r from-blue-600 to-emerald-500 hover:shadow-xl hover:scale-[1.02] cursor-pointer"
             }`}
         >
           {alreadyCheckedInToday ? "Completed ✓" : "Mark as Done"}
         </button>
 
         {alreadyCheckedInToday && (
-          <p className="mt-6 text-center text-sm text-emerald-600 animate-pulse">
-            Nice. You showed up today.
-          </p>
+          <>
+            <p className="mt-6 text-center text-sm text-emerald-600 animate-pulse">
+              Nice. You showed up today.
+            </p>
+            {!navigator.share ? '' :
+              <button onClick={async () => await navigator.share({title: "Compound", text: "I just checked in to my daily fitness goal!", url: window.location.href})} className="mt-4 w-full rounded-2xl border-2 border-gray-300 px-6 py-4 text-lg font-semibold text-gray-700 transition-all duration-300 hover:bg-gray-100 active:scale-95 cursor-pointer">Share</button>
+            }
+          </>
         )}
       </main>
     </div>

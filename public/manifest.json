@@ -23,6 +23,12 @@
       "src": "/screenshots/compound-screenshot-png.png",
       "sizes": "786x796",
       "type": "image/png"
+    },
+    {
+      "src": "/screenshots/compound-screenshot-png.png",
+      "sizes": "786x796",
+      "type": "image/png",
+      "form_factor": "wide"
     }
   ]
 }
